@@ -1,0 +1,208 @@
+html,body{
+        width: 100%;
+        height:100%;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        transition: 2s opacity;
+        background-color: #FFFA97
+    }
+
+
+    div{
+        box-sizing: border-box;
+    }
+
+    .header{
+        width: 100%;
+        height: 10%;
+        font-family: HKLightItalic;
+        font-size: 2em;
+        padding: 5% 0 0 10%;
+    }
+
+    .row{
+        width: 100%;
+        height: 15%;
+        font-family: HKLightItalic;
+        font-size: 4.5em;
+        padding: 10% 0 0 0;
+    }
+    .container{
+        width: 100%;
+        height: 40%;
+        font-family: HKLightItalic;
+        font-size: 4em;
+    }
+
+    .slider{
+        width: auto;
+        height: 5%;
+        margin: 5% 10% 5% 10%;
+        font-family: HKLightItalic;
+        font-size: 5em;
+    }
+
+    .button{
+    font-family: hkmedium;
+    color: black;
+    height: 30px;
+    width: 150px;
+    max-width: 40%;
+    margin: 0 auto auto 5%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    font-size: .2em;
+    float: left;
+    padding-top: .6%;
+    transition: all 0.5s ease;
+}
+
+:hover.button{
+        transition: all 0.5s ease;
+        border-style: solid;
+        background-color: #333333;
+        border-width: 2px;
+        color: white;
+        padding: 5px 15px 5px 15px;
+    }
+
+    .circle {
+        float: left;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px 0 10px;
+    background: #AFAFAF;
+}
+
+.selected{
+    background: #4F4F4F;
+    color: #4F4F4F;
+}
+
+.container2{
+    width:100%;
+    height: 50%;
+    margin-top: 3%
+}
+
+.text{
+    overflow: scroll;
+    width:60%;
+    height: 100%;
+    background-color: #FFF7C5;
+    font-size: .2em;
+    font-family: hklight;
+    margin: 2vh auto auto auto;
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  min-height: 100%;
+  position: relative;
+}
+
+*{
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+
+.nav{
+    font-family: helvetica;
+    width: 100%;
+    letter-spacing: 3px;
+    display: inline-block;
+    height: 100%;
+    padding: 100px;
+}
+
+
+
+.menu-item{
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    margin: 0 15px 15px 0;
+    cursor: pointer;
+}
+
+.open-item{
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    margin: 0 15px 15px 0;
+    cursor: pointer;
+}
+
+.stamp{
+    height: 100px;
+    width: 100px;
+    top: 3%;
+    left: 80%;
+    position: fixed;
+    z-index: 1;
+    font-family: HKLightItalic;
+    font-size: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+
+.menu-item:hover, .nav-item.active{
+    background: #fff;
+    color: #000;
+
+}
+
+.lightbox.beyonce{
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: #fff;
+    position: fixed;
+    z-index: 3;
+    top:0;
+    left:0;
+}
+
+.close-button{
+    position: absolute;
+    top: -5px;
+    right: 30px;
+    font-size: 50px;
+    font-family: helvetica;
+    cursor: pointer;
+}
+
+.audio{
+    opacity:0;
+}
+
+a {
+    color: inherit; 
+} 
+
+.hide{
+    display:none;
+
+}
+
+@font-face { font-family: HKMedium; src: url('HKGrotesk-Medium.otf'); } 
+@font-face { font-family: HKLightItalic; src: url('HKGrotesk-LightItalic.otf'); } 
+@font-face { font-family: HKLight; src: url('HKGrotesk-Light.otf'); } 
