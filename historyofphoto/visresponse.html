@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<head>
+	<title>VISUAL RESPONSE</title>
+	<link href="styles.css" media="all" rel="stylesheet"/>
+	
+</head>
+<body>
+	<div class="column photo">
+		<img src="couple.jpg">
+	</div>
+	<div class="column story">
+		<div class="box" id="box2">
+		<p class="the">two lovers are now at a crossroad in their relationship. he wants more in the relationship as he’s looking from a higher angle. he’s idealistic in this sense. she wants to be more grounded and realistic and wants to end it.</p>
+		<p class="the">Tiredness. Life in New York City can be exhausting. He’s dripping over her, letting his weight fall onto her shoulders. She seems tired, maybe tired of him? Maybe tired of life.</p>
+		<p class="the">it’s a statement about the nature of their relationship. he keeps her close to him, but doesn’t look at the camera at all which could represent the idea of hiding or shame. meanwhile she remains entrapped but her face is angled towards the camera but isn’t looking. she wants to be honest about their relationship but can’t because of him.</p>
+		<p class="the">I think there's a clear giver and reciever but its strange because the giver is also questioning what he is giving. Obviously the girl is recieving his love but he questions his own authenticity. She's thinking about where they're at, but she's not actively pushing him away. She's on the neutral line. I feel like he is forcing himself to show her something, but her face screams "Is this right?" and "Is this what I want?"</p>
+		<p class="the">Even though the photo is focused on her, the story is all about him.</p>
+		<p class="the">He knows he's losing her. She knows her mind is somewhere else, but she feels like she shouldn't leave.</p>
+		<p class="the">Worst rollercoaster restraint ever.</p>
+		<p class="the">He did something wrong and he is sincerely apologetic about it. She is not having it at all and wants to leave but continues to stay because she knows he needs her. She keeps him grounded and she feels obligated to stay.</p>
+		<p class="the">She definitely found someone or something else to focus on. It's so clear in her eyes that she is no longer interested with him. In fact, she's given up on mostly everything.</p>
+		</div>
+	</div>
+	<div class="buttons">
+		<a class="next round" onclick="plusDivs(-1)">&#8250;</a>
+	</div>
+<script type="text/javascript">
+	var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("the");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+};
+;
+
+</script>
+</body>
+</html>
