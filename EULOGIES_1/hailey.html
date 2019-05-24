@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HAILEY</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #C9232F;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>HAILEY</div>
+<div class="image">
+	<img src="objects-full/sailormoon-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A card reading "OMG! You're invited to My Party! Hailey Cornelius for Sat February 13 3:30-5:30, Saf-T-Swim 570 Main St Westbury, NY by Feb 9 (516)-931-6786
+	</div>
+	<div class="box" id="box" style="display:none;">
+		Growing up with immigrant parents, the concept of going to parties or hanging out in elementary school was unheard of. My parents believed my only duty was to go to school, get good grades, and get back home. I always recieved invitations like these in elementary school, but I would always have to make some sort of elaborate lie to get out of it. To make matters worse, my parents would be confronted in person to RSVP. FUCKING. AWKWARD. I really fucked with Hailey Cornelius in elementary school, I really did. She really was my bestie. She invited me to everything and her elementary school parties were the shit! She turned out all the stops.
+		<br>
+		<br>
+		Too bad she was a full-pledged Trump supporter who hated gays. Unfollowed.
+	</div>
+</div>
+<script type="text/javascript">
+	document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>

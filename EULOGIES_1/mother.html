@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MOTHER</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR MY</br>FATHER</div>
+<div class="image">
+	<img src="objects-full/dad-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		Age: 46
+		<br>
+		Height: 5 foot 3 inches
+		<br>
+		Ethnicity: Filipina
+		<br>
+		Relationship: Mother
+	</div>
+	<div class="box" id="box" style="display:none;">
+		I think leaving you was the hardest pill to swallow when I left for school. The feelings were mutual when you got worried that I'd be on my own. There has been countless of times when I missed your cooking, your smell, your voice.
+		<br>
+		<br>
+		Although you were never so vocal about it, you were very accepting of how I presented myself. You accepted my want for independence and my flamboyant self expression. I need that figure in my life who wants me to succeed not only in my career but emotionally and mentally. I miss you every day and I'm sorry I don't express that more.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+</script>
+</body>
+</html>

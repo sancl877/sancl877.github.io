@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GAMECUBE</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR OUR</br>GAMECUBE</div>
+<div class="image">
+	<img src="objects-full/gamecube-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A Gamecube system complete with console and controllers. There is a Barbie Sticker stuck on the top.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		You hold such a deep place in my heart. Nothing in this world will ever make me forget the years we have shared. You mostly resided in the porch of our house in Queens. In that porch, I collected over 200 games that we played together. You were a means of escape for me, an escape from the loneliness I suffered outside those walls.
+		<br>
+		<br>
+		You also helped me grow closer to others. You held a huge role in bringing me and my <a href="father.html">FATHER</a> together. We would spend endless night after endless night just playing Legend of Zelda. Our experience with you was the first time I saw my father as a best friend rather than an authoritative father figure. From then on, my father took more intiative in bonding with me. From taking me out to his bowling nights with his friends to watching Disney with me on the couch. Those moments and yours included are the most definitive of my childhood.
+		<br>
+		<br>
+		Thank you. Truly.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>
