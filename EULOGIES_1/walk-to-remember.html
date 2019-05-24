@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A WALK TO REMEMBER</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #8FA7FF;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>A WALK TO REMEMBER</div>
+<div class="image">
+	<img src="objects-full/awalktoremember-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A DVD of "A Walk to Remember"
+	</div>
+	<div class="box" id="box" style="display:none;">
+		My mom was in love with you. Whenever she buys her own DVD of a specific movie, that is a tell tale sign that movie had a significant impact on her.
+		<br>
+		<br>
+		You were on almost every other day, but as a kid, I don't remember much. I vividly remember some scenes such as one of Landon's friends jumping off a cliff into the lake scene and Landon and Jamie's on screen kiss. Despite my lack of understanding the movie, it always a go to for me. I think I was drawn to the body language of Landon and Jamie. That in itself allowed me to design a narrative in my head.
+		<br>
+		<br>
+		About 4 years ago, I decided to read the book you were based off of and it all made sense.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+</script>
+</body>
+</html>

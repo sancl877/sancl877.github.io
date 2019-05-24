@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0,
+    width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    
+<title>SADNESS</title>
+<link href="mobilestyles.css" media="all" rel="stylesheet" />
+<style type="text/css">
+body{
+    background-color: #8FA7FF;
+}
+
+.text{
+    background-color: #B6C9FC;
+}
+</style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+     <div class="lightbox beyonce hide">
+      <span class="close-button" href="#">&times;</span> 
+        <div class="nav">
+              <ul>
+               <li data-button="one" class="menu-item"><a href="fear.html">FEAR</a></li>
+                <li data-button="two" class="menu-item"><a href="anger.html">ANGER</a></li>
+                <li data-button="three" class="menu-item"><a href="joy">JOY</a></li>
+                <li data-button="four" class="menu-item" ><a href="sadness.html">SADNESS</a></li>
+                <li data-button="four" class="menu-item" ><a href="disgust.html">DISGUST</a></li>
+              </ul>
+          </div>
+    </div>
+        <div data-button="ex" class="open-item stamp">MENU</div>
+    
+
+    <div class="header">
+       sadness
+    </div>
+    <div class="row">
+        <div class="button psychology">PSYCHOLOGY</div>
+        <div class="button sources">SOURCE</div>
+    </div>
+    <div class="container">
+        <div class="text" id="container"">I’ve always wondered why people use the term “feeling blue” when they are sad. The color that clouded my horizons after Peter died was most certainly gray, not blue. I felt I was in a bad British mystery movie, in the midst of a gray, hazy, dense fog and I couldn’t find my way through the mist. I felt a heavy grey cloud looming overhead about to rain on my soul with even more sadness. My moods were thick with gray, slightly tinged with a touch of red anger, railing at my tragedy. I know that since Peter died, I have many moments when I “feel blue,” but I can’t fault my favorite color for my mood.
+<br><br>
+Recent research published in Psychological Science, a journal of the Association for Psychological Science, showed that sadness and emotion could influence various visual processes that are involved in perceiving color. In this study the results demonstrated that participants who watched a sad video clip were less accurate in identifying colors on the blue-yellow spectrum than participants who watched funny clips. Could this be the causative factor in the expression ‘feeling blue?’
+<br><br>
+Some say the word “feeling blue” comes from the tradition of ships flying blue flags and bearing a painted blue band when a captain or another officer died. Another origin of “the blues,” is derived from mysticism involving blue indigo, which was used by many West African cultures in death and bereavement ceremonies where all the mourners’ garments would have been dyed indigo blue to indicate suffering. This mystical association toward the indigo plant, translated to the US and the slaves who worked on cotton in the Southern plantations, often singing dirge-like songs referred to as “the blues.”
+<br><br>
+The word “blue” was first used by Chaucer in about 1385, in his poem, Complaint of Mars. Washington Irving is credited with having first used the term “the blues” in 1807, as a synonym for sadness: “He conducted his harangue with a sigh, and I saw he was still under the influence of a whole legion of the blues.” Irving was shortening the phrase “blue devils” which was a synonym dating back to Elizabethan time to describe a menacing presence. “The Blues” as a musical form, featuring flattened thirds and sevenths, may have originated around 1895, although officially in W.C. Handy’s Memphis Blues.
+<br><br>
+For me, blue represents tranquility, harmony, peace, and relaxation. My house is decorated in blue and white. I don’t find sadness in blue. Blue is also associated with the fifth chakra, located at the throat and therefore connected to communication. Someone who speaks the truth is “true blue.” I like the color blue. It makes me see clearly and find my way in the world in a calm and coherent manner. I have vowed to continue to look at the blue horizon and avoid the grey clouds of sadness to find solace and comfort in my journey towards restoration.
+<br><br>
+“Your attitude is like a box of crayons that color your world. Constantly color your picture gray, and your picture will always be bleak. Try adding some bright colors to the picture by including humor, and your picture begins to lighten up.” — Allen Klein
+</div>
+
+<div class="text" id="container2" style="display:none;">
+   Grad, Laurie. "Why The Color Blue Is Associated With Sadness." Huffington Post.
+    <br>
+    https://www.huffingtonpost.com/laurie-burrows-grad/color-blue-sadness_b_13233778.html
+</div>
+
+    </div>
+    <div class="slider" id="swipeBox" ontouchstart="touchStart(event,'swipeBox');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle selected"></div>
+        <div class="circle"></div>
+    </div>
+<script src="mobile.js"></script>
+<script type="text/javascript">
+
+$(".psychology").click(function(){
+        $('.button').removeClass('selected');
+        $(this).addClass('selected');
+        document.getElementById('container2').style.display = "none";
+        document.getElementById('container').style.display = "block";
+    });
+$(".sources").click(function(){
+        console.log("hi");
+        $('.button').removeClass('selected');
+        $(this).addClass('selected');
+        document.getElementById('container').style.display = "none";
+        document.getElementById('container2').style.display = "block";
+    });
+
+    function processingRoutine() {
+    var swipedElement = document.getElementById(triggerElementID);
+    if ( swipeDirection == 'right' ) {
+        window.location='disgust.html';
+    }
+    else if (swipeDirection == 'left'){
+        window.location='joy.html';
+}
+}
+            
+            $('.open-item').click(function() {
+    var button_name= $(this).data('button');
+    $('.content').attr('class', 'column content');
+    $('.content').addClass(button_name);
+    $('.about-text').addClass('hide');
+
+    if(button_name=='ex'){
+        //if button name is beyonce then, 2 EQUAL SIGNS CHECK/COMPARE THE VALUE, ONE EQUAL SIGN SETS THE VALUE
+        $('.lightbox').removeClass('hide');
+        //find lightbox and remove the class hide
+    } 
+    else if (button_name=='about'){
+        $('.about-text').removeClass('hide');
+}
+});
+//hey jquery, for every nav-item listen for clicks then run the function
+$('.close-button').click(function() {
+$('.lightbox').addClass('hide');
+$('.nav-item.ex').removeClass("active");
+    })
+//search for .close-button and once clicked, you will hide the lightbox class
+
+            
+            $('.button').click(function() {
+                $('.box').toggleClass('blah');
+            });
+            
+            $('.button').click(function() {
+                $('.square').toggleClass('yes');
+            });
+
+
+/*
+
+1) apply swipe function to a div in the background rather than the whole body
+    (div acts as actual background while body actually contains elements)
+2) adding a visual slider that the user wants to click
+
+
+
+*/
+
+
+</script>
+
+
+
+</body>
+</html>

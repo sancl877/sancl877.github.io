@@ -1,0 +1,230 @@
+{
+	"fear":[
+		{
+		"title":"commandments",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/commandments-close.jpg"
+		},
+		{
+		"title":"beer",
+		"description":"An empty can of Coors Light",
+		"memory":"I received you in 2017, just last year, at my first NYC gay pride march. I’ve attained numerous gay flags in various forms, but you are special. I vividly remember hopping over the metal barriers separating patrons and marchers. As police officers watched, I alongside many of my friends stomped on the pavement head held high. I have never felt so liberated in my entire life. I felt so much power at that moment",
+		"photo":"objects/beer-close.jpg"
+		},
+		{
+		"title":"toga",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/toga-close.jpg"
+		},
+		{
+		"title":"hymnal",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/hymnal-close.jpg"
+		},
+		{
+		"title":"father",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/father-close.jpg"
+		}
+	],
+
+	"anger":[
+		{
+		"title":"weights",
+		"description":"a printed rainbow on A piece of 12x12 fabric. The object’s fabric has a bandana quality.",
+		"memory":"I received you in 2017, just last year, at my first NYC gay pride march. I’ve attained numerous gay flags in various forms, but you are special. I vividly remember hopping over the metal barriers separating patrons and marchers. As police officers watched, I alongside many of my friends stomped on the pavement head held high. I have never felt so liberated in my entire life. I felt so much power at that moment",
+		"photo":"objects/weights-close.jpg"
+		},
+		{
+		"title":"mompolaroid",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/mompolaroid-close.jpg"
+		},
+		{
+		"title":"hailey",
+		"photo":"objects/hailey-close.jpg"
+		},
+		{
+		"title":"campsrus",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/cru-close.jpg"
+		},
+		{
+		"title":"piggy",
+		"photo":"objects/piggy-close.jpg"
+		}
+	],
+
+	"joy":[
+		{
+		"title":"pride",
+		"description":"A printed rainbow on a piece of 12x12 fabric. The object’s fabric has a bandana quality.",
+		"memory":"I received you in 2017, just last year, at my first NYC gay pride march. I’ve attained numerous gay flags in various forms, but you are special. I vividly remember hopping over the metal barriers separating patrons and marchers. As police officers watched, I alongside many of my friends stomped on the pavement head held high. I have never felt so liberated in my entire life. I felt so much power at that moment",
+		"photo":"objects/pride-close.jpg"
+		},
+		{
+		"title":"sailor-moon",
+		"description":"A VHS tape",
+		"memory":"Whenever I felt sad,",
+		"photo":"objects/sailor-moon-close.jpg"
+		},
+		{
+		"title":"iceland",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/iceland-close.jpg"
+		},
+		{
+		"title":"pikachu",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/pikachu-close.jpg"
+		},
+		{
+		"title":"dk",
+		"photo":"objects/dk-close.jpg"
+		},
+		{
+		"title":"fake",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/fake-close.jpg"
+		},
+		{
+		"title":"gamecube",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/gamecube-close.jpg"
+		},
+		{
+		"title":"govball",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/govball-close.jpg"
+		},
+		{
+		"title":"jesse",
+		"photo":"objects/jesse-close.jpg"
+		},
+		{
+		"title":"onedirection",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/onedirection-close.jpg"
+		},
+		{
+		"title":"halo",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/halo-close.jpg"
+		},
+		{
+		"title":"sister",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/sister-close.jpg"
+		},
+		{
+		"title":"earrings",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/earrings-close.jpg"
+		},
+		{
+		"title":"southpark",
+		"photo":"objects/southpark-close.jpg"
+		},
+		{
+		"title":"converse",
+		"photo":"objects/converse-close.jpg"
+		}
+	],
+
+	"sadness":[
+		{
+		"title":"walk-to-remember",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/walk-to-remember-close.jpg"
+		},
+		{
+		"title":"paint",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/paint-close.jpg"
+		},
+		{
+		"title":"grandpa",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/grandpa-close.jpg"
+		},
+		{
+		"title":"mypolaroid",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/mypolaroid-close.jpg"
+		},
+		{
+		"title":"mother",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/mother-close.jpg"
+		},
+		{
+		"title":"pencils",
+		"photo":"objects/pencils-close.jpg"
+		},
+		{
+		"title":"stone",
+		"photo":"objects/stone-close.jpg"
+		},
+		{
+		"title":"rayban",
+		"photo":"objects/rayban-close.jpg"
+		}
+	],
+
+	"disgust":[
+		{
+		"title":"sausage",
+		"description":"",
+		"memory":"blah blah blah",
+		"photo":"objects/sausage-close.jpg"
+		},
+		{
+		"title":"planner",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/planner-close.jpg"
+		},
+		{
+		"title":"cmbyn",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/cmbyn-close.jpg"
+		},
+		{
+		"title":"pancit",
+		"photo":"objects/pancit-close.jpg"
+		},
+		{
+		"title":"fit",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/fit-close.jpg"
+		},
+		{
+		"title":"oldcomputer",
+		"description":"8.5x11 paper framed in a wooden frame",
+		"memory":"blah blah blah",
+		"photo":"objects/oldcomputer-close.jpg"
+		}
+	]
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PENCILS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #8FA7FF;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR MY</br>PENCILS</div>
+<div class="image">
+	<img src="objects-full/pencils-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A set of carved sticks that also act as pencils. They are bound by red and white thread.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		After I graduated, my high school art teacher invited all the AP Art students over to her house in Long Island. When we got there, she insisted we walk around the fair happening in the town over. As we were walking, I found this vintage antique store. Among the items, I found you and was intrigued. There is no practical use for you though.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+</script>
+</body>
+</html>

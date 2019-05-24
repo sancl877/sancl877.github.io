@@ -1,0 +1,245 @@
+html,body{
+		width: 100%;
+		height:100%;
+		margin: 0;
+		padding: 0;
+		opacity: 1;
+    	transition: 2s opacity;
+	}
+
+	body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+	div{
+		 float: left;
+  	box-sizing: border-box;
+	}
+	.header{
+		width: 100%;
+		height: 25vh;
+		text-align: center;
+		font-size: 2.5em;
+		padding: 30px 0 30px 0;
+		font-family: HKLightItalic;
+		letter-spacing: 1px;
+		background-color: white;
+	}
+
+	.button{
+		border-style: solid;
+		border-color: black;
+		border-width: 2px;
+		padding: 5px 15px 5px 15px;
+		margin: 0 2px 0 2px;
+		position: relative;
+
+	}
+
+	:hover.fear{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #333333;
+		border-width: 2px;
+		color: white;
+		padding: 5px 15px 5px 15px;
+	}
+
+	:hover.anger{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #C9232F;
+		border-width: 2px;
+		color: white;
+		padding: 5px 15px 5px 15px;
+	}
+
+	:hover.joy{
+		cursor: pointer;
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #FFFA97;
+		border-width: 2px;
+		color: white;
+		padding: 5px 15px 5px 15px;
+	}
+
+	:hover.sadness{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #8FA7FF;
+		border-width: 2px;
+		color: white;
+		padding: 5px 15px 5px 15px;
+	}
+
+	:hover.disgust{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #4a412a;
+		border-width: 2px;
+		color: white;
+		padding: 5px 15px 5px 15px;
+	}
+
+	.emotions{
+		width: 100%;
+		height: 10%;
+		text-align: center;
+		font-size: 0.3em;
+		font-family: HKMedium;
+		letter-spacing: 1px;
+		line-height: 50px;
+		background-color: white;
+		z-index: 1;
+	}
+
+
+	.container{
+		overflow: scroll; 
+		width: 100%;
+		height: 70%;
+ 		display: flex;
+ 		flex-wrap: wrap;
+	    white-space:nowrap;
+
+}
+
+.container.slide {
+    display: inline-block;
+}
+	.row {
+  		flex: 100%;
+  		max-width: 20%;
+ 	 	padding: 0 1px;
+	}
+	.row img {
+		margin: 0 100px 0 100px;
+  		width: 100%;
+  		height: auto;
+	}
+@media screen and (max-width: 800px) {
+  .row {
+    flex: 50%;
+    min-width: 50%;
+  	}
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex: 100%;
+    min-width: 50%;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.image img{
+	width: auto;
+	float: right;
+	height: 100%;
+}
+
+.image{
+	width: 40vw;
+	height: 50vh;
+
+}
+
+.info{
+	width: 40vw;
+	height: 50vh;
+	margin-left: 5vw;
+
+}
+
+.box{
+	width: 100%;
+	height:90%;
+	padding:4% 6% 6% 6%;
+	background-color: lightgray;
+	font-family: HKLight;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: .65px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.tab{
+	width: 100%;
+	height:7%;
+	padding: 0px;
+	background-color: white;
+}
+
+.inner{
+	font-family: hkmedium;
+	color: black;
+	width: 50%;
+	height: 100%;
+	text-align: left;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	padding: 4px 0 0 6%;
+	font-size: 13px;
+	transition: all 0.5s ease;
+}
+
+.inner.active{
+	color: white;
+	background-color: black;
+}
+
+
+:hover.inner{
+	transition: all 0.5s ease;
+	color: white;
+	background-color: black;
+}
+
+.description{
+	border-right: 0 solid black;
+}
+
+.hide{
+	opacity: 0;
+}
+
+.show{
+	opacity:0;
+}
+
+.close-button{
+	transition: all 0.5s ease;
+	position: fixed;
+	top: 12px;
+	right: 35px;
+	font-size: 50px;
+	font-family: HKMedium;
+	cursor: pointer;
+	color: #BABABA;
+}
+
+:hover.close-button{
+	color: black;
+}
+
+
+@font-face { font-family: HKMedium; src: url('HKGrotesk-Medium.otf'); } 
+@font-face { font-family: HKLightItalic; src: url('HKGrotesk-LightItalic.otf'); } 
+@font-face { font-family: HKLight; src: url('HKGrotesk-Light.otf'); } 

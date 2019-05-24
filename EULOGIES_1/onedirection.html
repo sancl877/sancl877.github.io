@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ONE DIRECTION</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>ONE DIRECTION</div>
+<div class="image">
+	<img src="objects-full/onedirection-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A ticket to the One Direction show at Jones Beach in 2013.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		Warning: this particular object is incredibly embarrassing for me to write about. Here it is:
+		<br>
+		<br>
+		I am going to try to dilute this story of 3 years into one short paragraph. I can't pinpoint the exact moment that I heard of One Direction, but I do remember seeing Zayn Malik and crying. After that, I made social medias dedicated to all of them. From then on, I have built numerous friendships over our bond for this boy band.
+		<br>
+		<br>
+		During the summer of 2013, One Direction announced their tour and they were playing 30 minutes away from me. My parents blessed me with tickets, but under one circumstance: bring my uncle. Literally imagine being a young boy with his grown ass uncle who did not give a fuck about One Direction listening to One Direction for 3 hours straight. So there I was, literally crying living my best gay life while my uncle sat on the bleacher looking so miserable.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>

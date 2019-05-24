@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SISTER</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR MY</br>SISTER</div>
+<div class="image">
+	<img src="objects-full/sister-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		Age: 17
+		<br>
+		Height: 5 foot 2 inches
+		<br>
+		Ethnicity: Filipino-American
+		<br>
+		Relationship: Sister
+	</div>
+	<div class="box" id="box" style="display:none;">
+		I remember when I came out to you and you literally said "OK?" Iconic.
+		<br>
+		<br>
+		I fucking love you to death. Although we fight a lot, you never fail to support me in any decision I make. I feel like you have an overwhelming amount of trust in me, it makes me nervous.
+		<br>
+		<br>
+		I see a light in you that I wish I had. But, you are so enthusiatic about everything to the extent that sometimes I will tell you to calm down. You mask your sadness with smiles and I want you to realize that you don't have to do that anymore. Let your genuine emotions, passions, and thoughts shine through.
+		<br>
+		<br>
+		You're grown now, going to college at Baruch. We'll see each other again.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SOUTH PARK</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>SOUTH PARK</div>
+<div class="image">
+	<img src="objects-full/southpark-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A 3-disc set of the show "South Park."
+	</div>
+	<div class="box" id="box" style="display:none;">
+		There was two shows as a child that I fell in love with, Drawn Together and South Park. Shocker. At the time, I could only watch those shows when they were on TV. My smart ass thought "If I had a DVD of these shows, I could watch them whenever and wherever!" I finessed my way into getting my parents to drive me to BestBuy in order to get some DVDs. I picked up the South Park DVD set and my mom asked me, "What is this?"
+		<br>
+		"Oh, it's a cartoon on Disney." I replied.
+		<br>
+		"Okay!" my mom said.
+		<br> 
+		<BR>
+		Now you are mine.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+</script>
+</body>
+</html>

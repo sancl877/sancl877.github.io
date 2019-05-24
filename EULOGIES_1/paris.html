@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PARIS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>PARIS</div>
+<div class="image">
+	<img src="objects-full/paris-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		
+	</div>
+</div>
+<script type="text/javascript">
+	document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('box2').innerHTML = "";
+		document.getElementById('box2').innerHTML = "";
+	});
+$(".description").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('box2').innerHTML = "";
+		document.getElementById('box2').innerHTML = "A size medium gray polo with a poorly screenprinted Camps R Us employee logo." ;
+	});
+
+</script>
+</body>
+</html>
