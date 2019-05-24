@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BEER</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: black;
+}
+
+.header{
+	color: white;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR THE</br>BEER CAN</div>
+<div class="image">
+	<img src="objects-full/beer-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		An empty can of Coors Light.
+		<br><br>Dents appear around the can.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		My parents were so anal about me drinking while underage (rightfully so). One summer my parents had a cookout and there it was: an ice bucket filled with cans of Coors Light. As everyone was preoccupied with conversation, I saw that as my opportunity. I WANTED BEER! Sweat was dripping. Chest was thumping. Eyes were focused on that bucket. In a quick second, I beeline'd to ice bucket and snatched a can. I locked my bed room door, downed the beer, and tossed it in my desk. It has been in there for about 4 years.
+	</div>
+</div>
+<script type="text/javascript">
+	document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CMBYN</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #4a412a;
+}
+.header{
+	color: white;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>CALL ME BY YOUR NAME</div>
+<div class="image">
+	<img src="objects-full/cmbyn-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A book titled "Call Me By Your Name." The book is bruised and battered.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		You really fucked me up, not going to lie. At the time that I picked you up, all of my past relationships were going on rewind constantly in my head. I was also going through some very emotional thought concerning a guy in my life. When I read you, I couldn't help but relate to the narrative going on. 
+		<br>
+		<br>
+		Call Me By Your Name sets place during the summer of 1983 in Lombardy, Italy. The main plot follows Elio, a teenage boy, going through a rollercoaster of emotions when his father's intern, Oliver, stays with his family. The themes of exploration, love, and coming of age are so fucking relatable it hurts so bad. My brain was messed up for 3 months straight.
+		<br>
+		<br>
+		Please read this right now.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+</script>
+</body>
+</html>

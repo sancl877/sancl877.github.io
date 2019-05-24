@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EARRINGS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR MY</br>EARRINGS</div>
+<div class="image">
+	<img src="objects-full/earrings-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A pair of sterling silver earrings
+	</div>
+	<div class="box" id="box" style="display:none;">
+		Many of the statements made by the church reinforced stereotypical gender presentation. With that, earrings were only worn by women. When I turned 19, I saw that as a moment to just go against everything that I was taught because I finally am able to think for myself and be accountable for my own actions.
+		<br>
+		<br>
+		When I told my parents about it, my <a href="father.html">FATHER</a> was against it. However, my <a href="mother">MOTHER</a> was living for it. She discreetly bought you (bargained of course) in a Chinatown jewelry store. On my birthday, she put you on my desk. I saw that as a push and I fucking jumped.
+		<br>
+		<br>
+		Now if my lobes can heal...
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+</script>
+</body>
+</html>

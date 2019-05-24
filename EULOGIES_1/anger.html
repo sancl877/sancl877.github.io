@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0,
+    width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    
+<title>ANGER</title>
+<link href="mobilestyles.css" media="all" rel="stylesheet" />
+<style type="text/css">
+body{
+    background-color: #C9232F;
+}
+
+.text{
+    background-color: #F44258;
+}
+</style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+     <div class="lightbox beyonce hide">
+      <span class="close-button" href="#">&times;</span> 
+        <div class="nav">
+              <ul>
+                <li data-button="one" class="menu-item"><a href="fear.html">FEAR</a></li>
+                <li data-button="two" class="menu-item"><a href="anger.html">ANGER</a></li>
+                <li data-button="three" class="menu-item"><a href="joy">JOY</a></li>
+                <li data-button="four" class="menu-item" ><a href="sadness.html">SADNESS</a></li>
+                <li data-button="four" class="menu-item" ><a href="disgust.html">DISGUST</a></li>
+              </ul>
+          </div>
+    </div>
+        <div data-button="ex" class="open-item stamp">MENU</div>
+    
+
+    <div class="header">
+        anger
+    </div>
+    <div class="row">
+        <div class="button psychology">PSYCHOLOGY</div>
+        <div class="button sources">SOURCE</div>
+    </div>
+    <div class="container">
+        <div class="text" id="container" ">The present research examined whether perception of the color red influences basic motor functioning.
+Prior research on color and motor functioning has been guided by ill-defined theoretical statements, and
+has been plagued by methodological problems. Drawing on theoretical and empirical work on the
+threat-behavior link in human and nonhuman animals, we proposed and tested the prediction that
+perceiving red enhances the force and velocity of motor output. Experiment 1 demonstrated that red,
+relative to gray (matched to red on lightness), facilitates pinchgrip force. Experiment 2 demonstrated that
+red, relative to gray (matched to red on lightness) and blue (matched to red on lightness and chroma)
+facilitates handgrip force and the velocity of that force. These findings clearly establish a link between
+red and basic motor action, illustrate the importance of rigorous experimental methods when testing color
+effects, and highlight the need to attend to the functional, as well as aesthetic, value of color
+</div>
+
+<div class="text" id="container2" style="display:none;">
+    Elliot, A. J., & Aarts, H.. “Perception of the color red enhances the force and velocity of motor   output.” 11, no. 2 (2011): 445-449.
+
+</div>
+
+    </div>
+    <div class="slider" id="swipeBox" ontouchstart="touchStart(event,'swipeBox');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+        <div class="circle"></div>
+        <div class="circle selected"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+<script src="mobile.js"></script>
+<script type="text/javascript">
+
+$(".psychology").click(function(){
+        $('.button').removeClass('selected');
+        $(this).addClass('selected');
+        document.getElementById('container2').style.display = "none";
+        document.getElementById('container').style.display = "block";
+    });
+$(".sources").click(function(){
+        console.log("hi");
+        $('.button').removeClass('selected');
+        $(this).addClass('selected');
+        document.getElementById('container').style.display = "none";
+        document.getElementById('container2').style.display = "block";
+    });
+
+    function processingRoutine() {
+    var swipedElement = document.getElementById(triggerElementID);
+   if ( swipeDirection == 'right' ) {
+        window.location='joy.html';
+    }
+    else if (swipeDirection == 'left'){
+        window.location='fear.html';
+}
+}
+            
+            $('.open-item').click(function() {
+    var button_name= $(this).data('button');
+    $('.content').attr('class', 'column content');
+    $('.content').addClass(button_name);
+    $('.about-text').addClass('hide');
+
+    if(button_name=='ex'){
+        //if button name is beyonce then, 2 EQUAL SIGNS CHECK/COMPARE THE VALUE, ONE EQUAL SIGN SETS THE VALUE
+        $('.lightbox').removeClass('hide');
+        //find lightbox and remove the class hide
+    } 
+    else if (button_name=='about'){
+        $('.about-text').removeClass('hide');
+}
+});
+//hey jquery, for every nav-item listen for clicks then run the function
+$('.close-button').click(function() {
+$('.lightbox').addClass('hide');
+$('.nav-item.ex').removeClass("active");
+    })
+//search for .close-button and once clicked, you will hide the lightbox class
+
+            
+            $('.button').click(function() {
+                $('.box').toggleClass('blah');
+            });
+            
+            $('.button').click(function() {
+                $('.square').toggleClass('yes');
+            });
+
+
+/*
+
+1) apply swipe function to a div in the background rather than the whole body
+    (div acts as actual background while body actually contains elements)
+2) adding a visual slider that the user wants to click
+
+
+
+*/
+
+
+</script>
+
+
+
+</body>
+</html>

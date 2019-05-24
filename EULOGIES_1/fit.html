@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FASHION INSTITUTE OF TECHNOLOGY</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #4a412a;
+}
+.header{
+	color: white;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR THE</br>FASHION INSTITUTE OF TECHNOLOGY</div>
+<div class="image">
+	<img src="objects-full/fit-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		An envelope containing an acceptance letter to the Fashion Institute of Technology.
+		<br><br>Dents appear around the can.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		For a long time before college applications, I accepted my fate to a SUNY/CUNY school. Being a NYS resident, it made the most sense financially. I refused to put any sort of burden on my family. When it came to applying to colleges, I, along with a few others in my high school, chose all art schools. I was dedicated to attending FIT. It’s funny because I forced myself to believe that was my “dream school” when in reality I wanted to attend a private institution such as Pratt and Parsons. I put so much effort into the damn application. I got in (and to all my other schools.) During the Parson’s acceptance week, I told my parents I wanted to visit the school one last time. When I left, they refused to have me go to FIT. Here I am now making this website.
+	</div>
+</div>
+<script type="text/javascript">
+	document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>

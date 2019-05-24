@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DANITY KANE</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>DANITY KANE</div>
+<div class="image">
+	<img src="objects-full/dk-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		Album "Danity Kane" by Danity Kane released in 2006.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		I grew up on reality television. That is why my brain is so fucked. Making the Band was a show on MTV that I followed episode to episode. The entire premise of the show was to find five women to be signed as a group to Sean (Diddy) Comb's record label. The band to come out of the third season was Danity Kane. They were the baddest bitches alive at the time. They were the original Fifth Harmony. I remember putting on the CD in my <a href="oldcomputer.html">OLD COMPUTER</a> and just blasting all their songs all throughout the house. I lived my gayest youth with them.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>

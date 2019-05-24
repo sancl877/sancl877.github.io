@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CAMPS R' US</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #C9232F;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR THE</br>CAMPS R' US STAFF SHIRT</div>
+<div class="image">
+	<img src="objects-full/cru-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A size medium gray polo with a poorly screenprinted Camps R Us employee logo. This shirt actually fucking eats me up. It is so fucking big on me. 
+	</div>
+	<div class="box" id="box" style="display:none;">
+		Let me set the mood for you. Summer of 2016: I was freshly out of high school. Hoorah! I am finally an adult! I wanted to make some coin before I start my first year of college. At the time, I was already in the interview process of a design job at a firm in Long Island. To my surprise, they were very interested in the work that I have accomplished. I was in contact with the head of the agency and he told me that I would be called in for a second interview in 2-3 weeks. 2 weeks come, no response. 3 weeks come, still no response. I'm getting nervous! I started looking at more jobs and a couple of my friends were recommending a counselor position at a Camps R Us! My experience at that camp was literally living hell. I was being paid $5 an hour to take care of hellish children. This experience humbled me though and I am stronger now because of it.
+	</div>
+
+</div>
+<script type="text/javascript">
+	document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>
