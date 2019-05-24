@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HALO</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>HALO:REACH</div>
+<div class="image">
+	<img src="objects-full/halo-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		An XBOX 360 case containing the game Halo: Reach.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		I was always a video game fanatic. You were a part of so many lives. You were something that I always observed growing up. My cousins and our friends would always gather to have tournaments for you. You became a culture in itself and I wanted in. As <a href="gamecube.html">GAMECUBE</a>and Wii started to become boring and obselete, I decided to take manners into my own hands. I sold most of my <a href="gamecube.html">GAMECUBE</a> games in order to get my own Xbox 360. Like my <a href="gamecube.html">GAMECUBE</a> and their games, you served as a way for me to escape reality and connect with people online.
+		<br>
+		<br>
+		I never took a game so seriously. My CR ranking was literally a digital dick size. I spent so much time sniping heads and gunning down other Spartans to boost my ego.
+		<br>
+		<br>
+		You also helped strengthen my relationship with my friend, Justin. He was in a very dark place at the time and utilized Halo as an outlet. You existed in so many different places, that whenever we were together you were always brought up.
+		<br>
+		<br>
+		Thanks for the countless of hours I spent with you.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>

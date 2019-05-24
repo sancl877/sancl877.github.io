@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EULOGIES</title>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<style type="text/css">
+	html,body{
+		transition: all 1s ease;
+		width: 100%;
+		height:100%;
+		margin: 0;
+		padding: 0;
+	}
+	body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+
+	div{
+		 float: left;
+  	box-sizing: border-box;
+	}
+	.header{
+		width: 100%;
+		height: 30vh;
+		text-align: center;
+		font-size: .75em;
+		padding: 3.5vh 0 0 0;
+		font-family: HKLightItalic;
+		letter-spacing: 1px;
+	}
+
+	.button{
+		transition: all 0.5s ease;
+		border-style: solid;
+		border-color: black;
+		border-width: 1px;
+		padding: 5px 15px 5px 15px;
+		margin: 0 2px 0 2px;
+		position: relative;
+
+	}
+
+	.fear.selected{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #333333;
+		border-width: 2px;
+		color: white;
+		padding: 5px 10px 5px 10px;
+	}
+
+	:hover.fear{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #333333;
+		border-width: 2px;
+		color: white;
+		padding: 5px 10px 5px 10px;
+	}
+
+	:hover.anger{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #C9232F;
+		border-color: #56111C;
+		border-width: 2px;
+		color: #56111C;
+		padding: 5px 10px 5px 10px;
+	}
+	.anger.selected{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #E2293F;
+		border-color: #56111C;
+		border-width: 2px;
+		color: #56111C;
+		padding: 5px 10px 5px 10px;
+	}
+
+	:hover.joy{
+		cursor: pointer;
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #FFFA97;
+		border-width: 2px;
+		color: #7C774C;
+		padding: 5px 10px 5px 10px;
+	}
+
+	.joy.selected{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #FFFA97;
+		border-color: #7C774C;
+		border-width: 2px;
+		color: #56111C;
+		padding: 5px 10px 5px 10px;
+	}
+
+	:hover.sadness{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #8FA7FF;
+		border-width: 2px;
+		color: #48587C;
+		padding: 5px 10px 5px 10px;
+	}
+	.sadness.selected{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #8FA7FF;
+		border-color: #48587C;
+		border-width: 2px;
+		color: #48587C;
+		padding: 5px 10px 5px 10px;
+	}
+
+	:hover.disgust{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #4a412a;
+		border-width: 2px;
+		color: white;
+		padding: 5px 10px 5px 10px;
+	}
+	.disgust.selected{
+		transition: all 0.5s ease;
+		border-style: solid;
+		background-color: #4a412a;
+		border-color: #231e15;
+		border-width: 2px;
+		color: white;
+		padding: 5px 10px 5px 10px;
+	}
+
+	.emotions{
+		margin-top: .8%;
+		width: 100%;
+		height: 10%;
+		text-align: center;
+		font-size: .6em;
+		font-family: HKMedium;
+		letter-spacing: 1px;
+		line-height: 50px;
+		z-index: 1;
+		padding: 0vh 0% 0 0%;
+	}
+
+
+	img{
+		size: cover;
+	}
+
+	a{
+		height: 100%;
+	}
+
+	.container{
+		overflow: scroll; 
+		width: 100%;
+		height: 70%;
+ 		display: flex;
+ 		flex-wrap: wrap;
+	    white-space:nowrap;
+	    overflow-y: hidden;
+
+}
+
+.container.slide {
+    display: inline-block;
+}
+	.row {
+  		flex: 100%;
+  		max-width: 100%;
+ 	 	padding: 5% 1px;
+	}
+	.row img {
+		margin: 0 5vh 0 10vh;
+  		max-width: 20%;
+  		min-width: 10%;
+  		height: auto;
+  		transform: translate(0%,-15%);
+	}
+@media screen and (max-width: 800px) {
+  .row {
+    flex: 50%;
+    min-width: 50%;
+  	}
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex: 100%;
+    min-width: 50%;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: none; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.close-button{
+	position: absolute;
+	top: -5px;
+	right: 30px;
+	font-size: 100px;
+	font-family: helvetica;
+	cursor: pointer;
+	color: black;
+}
+
+.lightbox{
+	display: none;
+	/* all lightbox properties */
+}
+
+.visiblelightbox{
+	display: block;
+}
+
+
+@font-face { font-family: HKMedium; src: url('HKGrotesk-Medium.otf'); } 
+@font-face { font-family: HKLightItalic; src: url('HKGrotesk-LightItalic.otf'); } 
+
+</style>
+</head>
+<body id="yas">
+<div class="header" id="yas2">EULOGIES FOR THE</br>THINGS I LEFT BEHIND
+	<div class="emotions" id="yas3">
+		<a class="button fear" id="fear">FEAR</a>
+		<a class="button anger" id="anger">ANGER</a>
+		<a class="button joy" id="joy">JOY</a>
+		<a class="button sadness" id="sadness">SADNESS</a>
+		<a class="button disgust" id="disgust">DISGUST</a>
+	</div>
+</div>
+<div class="container">
+	<div class="row" id="gallery">
+    </div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+  $(function() {
+    $('body').removeClass('fade-out');
+});
+
+// displaying json:
+// - upload json to github
+// - get raw url of json
+
+var url = 'https://raw.githubusercontent.com/sancl877/InteractWithMeZaddy.github.io/master/objects.json';
+
+$.getJSON(url, function(data){
+	
+	console.log(data)
+	console.log(data.fear)
+	console.log(data.fear[1])
+	console.log(data.fear[1].title)
+
+	console.log(data)
+	console.log(data.anger)
+	console.log(data.anger[1])
+	console.log(data.anger[1].title)
+	console.log(data.anger[1].photo)
+
+console.log(data.sadness)
+console.log(data.sadness[1])
+console.log(data.sadness[1].title)
+console.log(data.sadness[1].description)
+console.log(data.sadness[1].photo)
+	// output everything:
+
+	// is similar to funciotn below, except you would also be iterating thorugh each key	
+
+
+	// output category:
+	
+	$(".fear").click(function(){
+		$("#yas").attr("style","background-color: #1C1C1C; color:white");
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('gallery').innerHTML = "";
+		console.log("ayy");
+	
+		var filter = $(this).attr("fear");
+		console.log(data.fear[1].title); 
+
+		for (var i = 0; i < url.length; i++) {
+		
+			// var iteration = data.fear.title;
+
+			// console.log(iteration);
+
+			$(".row").append("<a href='" + data.fear[i].title + ".html'><img src=" + data.fear[i].photo + "></a>")
+
+		}		
+		
+
+	});
+
+	$(".anger").click(function(){
+		$("#yas").attr("style","background-color: #C9232F; color:white");
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('gallery').innerHTML = "";
+		console.log("ayy");
+	
+		var filter = $(this).attr("anger");
+		console.log(data.anger[1].title); 
+
+		for (var i = 0; i < url.length; i++) {
+			$(".row").append("<a href='" + data.anger[i].title + ".html'><img src=" + data.anger[i].photo + "></a>")
+
+			// $(".row").append("<a href='" + data.anger[i].title + ".html'><img src='objects/" + data.anger[i].title + "-close.jpg'"+"></a>")
+
+		}
+		
+
+	});
+
+	$(".sadness").click(function(){
+		$("#yas").attr("style","background-color: #8FA7FF; color: #48587C");
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('gallery').innerHTML = "";
+		console.log("ayy");
+	
+		var filter = $(this).attr("sadness");
+		console.log(data.sadness[1].title); 
+
+		for (var i = 0; i < url.length; i++) {
+		
+			// var iteration = data.fear.title;
+
+			// console.log(iteration);
+
+			$(".row").append("<a href='" + data.sadness[i].title + ".html'><img src=" + data.sadness[i].photo + "></a>")
+
+		}		
+		
+
+	});
+
+	$(".joy").click(function(){
+		$("#yas").attr("style","background-color: #FFF48D; color:#7C774C");
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('gallery').innerHTML = "";
+		console.log("ayy");
+	
+		var filter = $(this).attr("joy");
+		console.log(data.joy[1].title); 
+
+		for (var i = 0; i < url.length; i++) {
+		
+			// var iteration = data.fear.title;
+
+			// console.log(iteration);
+
+			$(".row").append("<a href='" + data.joy[i].title + ".html'><img src=" + data.joy[i].photo + "></a>")
+
+		}		
+		
+
+	})
+
+	$(".disgust").click(function(){
+		$("#yas").attr("style","background-color: #4a412a; color:white");
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+		document.getElementById('gallery').innerHTML = "";
+		console.log("ayy");
+	
+		var filter = $(this).attr("disgust");
+		console.log(data.disgust[1].title); 
+
+		for (var i = 0; i < url.length; i++) {
+		
+			// var iteration = data.fear.title;
+
+			// console.log(iteration);
+
+			$(".row").append("<a href='" + data.disgust[i].title + ".html'><img src=" + data.disgust[i].photo + "></a>")
+
+		}		
+		
+
+	})
+
+
+})
+
+
+
+
+// lightbox:
+
+// $(".imageorwhatever").click(function(){
+	
+// 	$(".lightbox").addClass("visiblelightbox")
+
+// })
+
+
+
+
+
+
+</script>
+</body>
+</html>

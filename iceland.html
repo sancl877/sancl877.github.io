@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ICELAND</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="styles.css" media="all" rel="stylesheet"/>
+<style type="text/css">
+body, .header{
+	background-color: #FFFA97;
+}
+</style>
+</head>
+<body>
+<div class="header"><a href="homepage.html"><span class="close-button" href="#">&times;</a></span> EULOGY FOR</br>ICELAND</div>
+<div class="image">
+	<img src="objects-full/iceland-full.jpg" onclick="openModal()">
+</div>
+<div class="info">
+	<div class="tab">
+		<div class="inner description">DESCRIPTION</div>
+		<div class="inner memory">MEMORY</div>
+	</div>
+	<div class="box" id="box2">
+		A manila envelope containing a photograph of a winter in Reykjavík.
+	</div>
+	<div class="box" id="box" style="display:none;">
+		My first trip without my family was in January of 2017. I left New York with three of my friends to Reykjavík, Iceland. On our first day in the city, we walked around Reykjavík and I spotted this dainty camera shop. I already pre-planned the things I wanted to bring back to the States and a photograph from an Icelandic photographer was one of them. Among the sea of beautiful photographs, you stood out to me. You were strong in contrast to how I saw Iceland to be on the Internet. Everyone seemed to portray Iceland as being a light and heavenly place, but you provided a new perspective for me. You exuded an eerie quality that I was so drawn to. You were freeing but dangerous at the same time. You stay hanging on the wall of my room. The one with the only window.
+	</div>
+</div>
+<script type="text/javascript">
+document.body.className += ' fade-out';
+
+ $(function() {
+    $('body').removeClass('fade-out');
+	});
+
+$(".memory").click(function(){
+		$('.description').removeClass('active');
+    	$(this).addClass('active');
+		document.getElementById('box2').style.display = "none";
+        document.getElementById('box').style.display = "block";
+	});
+$(".description").click(function(){
+		$('.memory').removeClass('active');
+    	$(this).addClass('active');
+		$('.button').removeClass('selected');
+    	$(this).addClass('selected');
+    	document.getElementById('box2').style.display = "block";
+		document.getElementById('box').style.display = "none";
+	});
+
+</script>
+</body>
+</html>
